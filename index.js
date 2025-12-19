@@ -1,0 +1,13 @@
+console.log('Hello, World!');
+console.log('This is the index.js file.');
+console.log('Welcome to the project!');
+console.log('Let\'s get started with coding!');
+console.log('Enjoy your coding journey!');
+console.log('Happy coding!');
+console.log('Goodbye!');
+const age1 = 25;
+const age2 = 30;
+console.log('Total age is: ' + (age1 + age2));
+console.log('average age is: ' + ((age1 + age2) / 2));
+console.log(age1+age2);
+console.log('Code execution completed.');

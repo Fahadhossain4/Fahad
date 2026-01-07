@@ -1,36 +1,27 @@
 #include <iostream>
 using namespace std;
-
-class myclass {
-    int x;
-
-public:
-    myclass(int a = 0)
+class myclass
+{
+    int a,b;
+    public:
+    void set_fun(int i,int j)
     {
-        x = a;
-        cout << "Constructor called x = " << x << endl;
+        a=i;
+        b=j;
     }
-    ~myclass()
+    void get_fun()
     {
-        cout << "Destructor called x = " << x << endl;
-    }
-
-    void show()
-    {
-        cout << "x = " << x << endl;
+        cout<<"a="<<a<<endl<<"b="<<b<<endl;
     }
 };
-void display(myclass o)
-{
-    cout << "Inside function display()" << endl;
-    o.show();
-}
 
-int main() {
-    cout << "Creating object o1:" << endl;
-    myclass o1(10);
-    cout << "Assigning o1 to o2:" << endl;
-    myclass o2;
-    o2 = o1;
+int main()
+{
+    myclass ob1, ob2;
+    ob1.set_fun(10,20);
+    ob1.get_fun();
+    cout<<"After assigning another obj"<<endl;
+    ob2=ob1;
+    ob2.get_fun();
     return 0;
 }

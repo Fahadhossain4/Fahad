@@ -3,10 +3,21 @@ using namespace std;
 
 int main()
 {
-    int i,rev=0,n,j;
+    int i,j,riv=0;
     cin>>i;
-    n=i;
-    while (n>0)
-    rev=rev*10+n%10;
-    cout<<rev;
+    j=i;
+    while(i>0)
+    {
+        riv=riv*10+i%10;
+        i=i/10;
+    }
+    if(j==riv)
+    {
+        cout<<j<<"-> Palindrome";
+    }
+    else
+    {
+        cout<<j<<"-> Not palindrome";
+    }
+    return 0;
 }

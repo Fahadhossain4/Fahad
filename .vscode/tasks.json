@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build C (output)",
+      "type": "shell",
+      "command": "mkdir -p \"${workspaceFolder}/output\" && gcc -Wall -Wextra -g3 \"${file}\" -o \"${workspaceFolder}/output/${fileBasenameNoExtension}\"",
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    },
+    {
+      "label": "build C++ (output)",
+      "type": "shell",
+      "command": "mkdir -p \"${workspaceFolder}/output\" && g++ -Wall -Wextra -g3 \"${file}\" -o \"${workspaceFolder}/output/${fileBasenameNoExtension}\"",
+      "problemMatcher": ["$gcc"],
+      "group": "build"
+    },
+    {
+      "label": "run (output)",
+      "type": "shell",
+      "command": "./${fileBasenameNoExtension}",
+      "options": {
+        "cwd": "${workspaceFolder}/output"
+      },
+      "group": "test"
+    },
+    {
+      "label": "build & run C (output)",
+      "type": "shell",
+      "command": "mkdir -p \"${workspaceFolder}/output\" && gcc -Wall -Wextra -g3 \"${file}\" -o \"${workspaceFolder}/output/${fileBasenameNoExtension}\" && \"${workspaceFolder}/output/${fileBasenameNoExtension}\"",
+      "problemMatcher": ["$gcc"],
+      "group": "test"
+    },
+    {
+      "label": "build & run C++ (output)",
+      "type": "shell",
+      "command": "mkdir -p \"${workspaceFolder}/output\" && g++ -Wall -Wextra -g3 \"${file}\" -o \"${workspaceFolder}/output/${fileBasenameNoExtension}\" && \"${workspaceFolder}/output/${fileBasenameNoExtension}\"",
+      "problemMatcher": ["$gcc"],
+      "group": "test"
+    }
+  ]
+}
